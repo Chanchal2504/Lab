@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info Display</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h2>User Information</h2>
+      <div id="user-info">
+      </div>
+    </div>
+  </div>
+  <script>
+    const user = {
+      name: "Chanchal Patil",
+      age: 21,
+      email: "patilchanchal32@gmail.com"
+    };
+
+    const container = document.getElementById("user-info");
+
+    const namePara = document.createElement("p");
+    namePara.innerHTML = `<strong>Name:</strong> ${user.name}`;
+
+    const agePara = document.createElement("p");
+    agePara.innerHTML = `<strong>Age:</strong> ${user.age}`;
+
+    const emailPara = document.createElement("p");
+    emailPara.innerHTML = `<strong>Email:</strong> ${user.email}`;
+
+    container.appendChild(namePara);
+    container.appendChild(agePara);
+    container.appendChild(emailPara);
+  </script>
+
+</body>
+</html>
